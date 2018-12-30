@@ -1,8 +1,8 @@
 {
   "name": "aihowes",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A personal card for Alex Howes (@aihowes)",
-  "main": "/bin/card.js",
+  "main": "./bin/card.js",
   "bin": {
     "aihowes": "./bin/card.js"
   },
@@ -11,8 +11,7 @@
     "url": "https://github.com/aihowes/aihowes.git"
   },
   "scripts": {
-    "prepublish": "npm run build",
-    "build": "node build.js",
+    "build": "webpack",
     "dev": "npm run build && node ./bin/card.js",
     "lint": "standard",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -29,11 +28,13 @@
   "license": "MIT",
   "files": [
     "bin/card.js",
-    "bin/output"
+    "bin/bundle.js"
   ],
   "devDependencies": {
     "boxen": "^2.1.0",
     "chalk": "^2.4.1",
-    "standard": "^12.0.1"
+    "standard": "^12.0.1",
+    "webpack": "^4.28.3",
+    "webpack-cli": "^3.1.2"
   }
 }

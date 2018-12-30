@@ -1,14 +1,10 @@
-'use strict'
-
 // Pull in our modules
-const chalk = require('chalk')
-const boxen = require('boxen')
-const fs = require('fs')
-const path = require('path')
+const chalk = require('chalk');
+const boxen = require('boxen');
 
 // Define colours
-const black = '#222'
-const red = '#e74c3c'
+const black = '#222';
+const red = '#e74c3c';
 
 // Define options for Boxen
 const options = {
@@ -40,6 +36,6 @@ const output = `
   ${h('Instagram:')}  ${l('https://instagram.com/')}${u('aihowes')}
   ${h('  YouTube:')}  ${l('https://youtube.com/c/')}${u('aihowes')}
   ${h('  LinkedIn:')}  ${l('https://linkedin.com/in/')}${u('aihowes')}
-`
+`;
 
-fs.writeFileSync(path.join(__dirname, 'bin/output'), chalk.green(boxen(output, options)))
+console.log(boxen(output, options));
