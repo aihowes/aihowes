@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+		"moduleResolution": "node16",
+		"target": "ES2021",
+		"lib": [
+			"DOM",
+			"DOM.Iterable",
+			"ES2021"
+		],
+		"skipLibCheck": true,
+    "outDir": "./bin"
+  },
+  "include": ["./src/**/*"]
+}

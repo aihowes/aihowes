@@ -1,19 +1,20 @@
 {
   "name": "aihowes",
-  "version": "1.1.0",
+  "type": "module",
+  "version": "2.0.0",
   "description": "A personal card for Alex Howes (@aihowes)",
-  "main": "./bin/card.js",
-  "bin": {
-    "aihowes": "./bin/card.js"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/aihowes/aihowes.git"
   },
+  "main": "./bin/index.js",
+  "bin": {
+    "aihowes": "./bin/index.js"
+  },
   "scripts": {
-    "build": "webpack",
-    "dev": "npm run build && node ./bin/card.js",
-    "lint": "standard",
+    "build": "tsc",
+    "dev": "npm run build && node ./bin/index.js",
+    "lint": "eslint",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -26,15 +27,15 @@
   ],
   "author": "Alex Howes <alex@alexhowes.co.uk> (https://alexhowes.co.uk)",
   "license": "MIT",
-  "files": [
-    "bin/card.js",
-    "bin/bundle.js"
-  ],
+  "dependencies": {
+    "boxen": "^7.0.2",
+    "chalk": "^5.2.0"
+  },
   "devDependencies": {
-    "boxen": "^2.1.0",
-    "chalk": "^2.4.1",
-    "standard": "^12.0.1",
-    "webpack": "^4.28.3",
-    "webpack-cli": "^3.1.2"
+    "@typescript-eslint/eslint-plugin": "^5.59.1",
+    "@typescript-eslint/parser": "^5.59.1",
+    "eslint": "^8.39.0",
+    "prettier": "2.8.8",
+    "typescript": "^5.0.4"
   }
 }
